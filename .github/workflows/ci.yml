@@ -21,7 +21,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "16"
-      - run: npm i prettier
       - run: npm ci
       - run: npm run format:check
       - run: npm test -- --coverage
