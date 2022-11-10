@@ -36,3 +36,8 @@ jobs:
         run: npx codecov
         env:
           CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
+      - name: Retrieve Code Coverage
+        if: github.event_name == 'push'
+        run: npx codecov
+        env:
+          CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
