@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: "16"
       - run: npm ci
-      - run: npx prettier --check \"**/*.{js,jsx,ts,tsx,yml,yaml,json,css,scss,md}\"
+      - run: npx prettier --check "**/*.{js,jsx,ts,tsx,yml,yaml,json,css,scss,md}"
       - run: npm test -- --coverage
         env:
           CI: true
